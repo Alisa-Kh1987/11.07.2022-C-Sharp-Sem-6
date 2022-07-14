@@ -118,15 +118,15 @@ Console.WriteLine("-------");
 int[] myArray = CreateArray();
 ShowArray(myArray);
 
-int positiv_nums = 0;
+int positiv_count = 0;
 for (int i = 0; i<myArray.Length; i++)
 {
 if (myArray[i] > 0){
-    positiv_nums += 1;
+    positiv_count += 1;
     }    
 }
 
-Console.WriteLine(positiv_nums);
+Console.WriteLine(positiv_count);
 */
 
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
