@@ -70,7 +70,7 @@ Console.WriteLine(String.Join(" ", array));
 
 //Практическое задание к семинару № 6 (11.07.2022)
 
-//
+//Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 /*
 int[] CreateRandomArray(int N, int start, int end)
 {
@@ -81,18 +81,18 @@ RandomArray[i] = new Random().Next(start, end + 1);
 }
 return RandomArray;
 }
-*/
+
 int[] CreateArray()
 {
 Console.WriteLine("Введите количество элементов массива");
 int size = Convert.ToInt32(Console.ReadLine());
-int[] RandomArray = new int[size];
+int[] Array = new int[size];
 for (int i = 0; i < size; i++)
 {
 Console.WriteLine($"Введите {i+1} элемент массива");
-RandomArray[i] = Convert.ToInt32(Console.ReadLine());
+Array[i] = Convert.ToInt32(Console.ReadLine());
 }
-return RandomArray;
+return Array;
 }
 
 void ShowArray(int[] array)
@@ -105,13 +105,13 @@ Console.WriteLine();
 }
 
 Console.Clear();
-/*Console.WriteLine("Введите количество элементов в массиве");
-int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите первое число случайно генерируемого диапазона");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите последнее число случайно генерируемого диапазона");
-int max = Convert.ToInt32(Console.ReadLine());
-*/
+//Console.WriteLine("Введите количество элементов в массиве");
+//int num = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Введите первое число случайно генерируемого диапазона");
+//int min = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Введите последнее число случайно генерируемого диапазона");
+//int max = Convert.ToInt32(Console.ReadLine());
+
 //int[] myRandomArray = CreateRandomArray(num, min, max);
 //ShowArray(myRandomArray);
 Console.WriteLine("-------");
@@ -127,3 +127,26 @@ if (myArray[i] > 0){
 }
 
 Console.WriteLine(positiv_nums);
+*/
+
+//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+Console.WriteLine("Введите k1: ");
+double k1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите b1: ");
+double b1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите k2: ");
+double k2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите b2: ");
+double b2 = Convert.ToDouble(Console.ReadLine());
+
+double x = 0;
+double y = 0;
+
+if (k1!=k2 || b1 != b2){
+    x = (b2-b1)/(k1-k2);
+    y = x*k1 + b1;
+}
+
+Console.WriteLine ("-> " + "x");
+Console.WriteLine (y);
