@@ -68,20 +68,12 @@ Console.WriteLine(String.Join(" ", array));
 
 //Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
 
+
 //Практическое задание к семинару № 6 (11.07.2022)
 
 //Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-/*
-int[] CreateRandomArray(int N, int start, int end)
-{
-int[] RandomArray = new int[N];
-for (int i = 0; i < N; i++)
-{
-RandomArray[i] = new Random().Next(start, end + 1);
-}
-return RandomArray;
-}
 
+/*
 int[] CreateArray()
 {
 Console.WriteLine("Введите количество элементов массива");
@@ -97,23 +89,17 @@ return Array;
 
 void ShowArray(int[] array)
 {
-for (int i = 0; i < array.Length; i++)
-{
-Console.Write(array[i] + " ");
-}
+    for (int i = 0; i < array.Length; i++){
+        Console.Write(array[i]);
+        if (i<array.Length-1) {
+        Console.Write(", ");
+        }
+    }
 Console.WriteLine();
 }
 
 Console.Clear();
-//Console.WriteLine("Введите количество элементов в массиве");
-//int num = Convert.ToInt32(Console.ReadLine());
-//Console.WriteLine("Введите первое число случайно генерируемого диапазона");
-//int min = Convert.ToInt32(Console.ReadLine());
-//Console.WriteLine("Введите последнее число случайно генерируемого диапазона");
-//int max = Convert.ToInt32(Console.ReadLine());
 
-//int[] myRandomArray = CreateRandomArray(num, min, max);
-//ShowArray(myRandomArray);
 Console.WriteLine("-------");
 int[] myArray = CreateArray();
 ShowArray(myArray);
@@ -126,27 +112,29 @@ if (myArray[i] > 0){
     }    
 }
 
-Console.WriteLine(positiv_count);
-*/
+Console.WriteLine($"Количество положительных элементов: -> {positiv_count}");
 
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
-Console.WriteLine("Введите k1: ");
+Console.Clear();
+Console.WriteLine("Введите k1 для прямой, заданной уравнением y = k1*x + b1: ");
 double k1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите b1: ");
+Console.WriteLine("Введите b1 для прямой, заданной уравнением y = k1*x + b1: ");
 double b1 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите k2: ");
+Console.WriteLine("Введите k2 для прямой, заданной уравнением y = k2*x + b2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите b2: ");
+Console.WriteLine("Введите b2 ля прямой, заданной уравнением y = k2*x + b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 
-double x = 0;
-double y = 0;
-
-if (k1!=k2 || b1 != b2){
-    x = (b2-b1)/(k1-k2);
-    y = x*k1 + b1;
+if  (k1==k2 && b1 == b2) {
+    Console.WriteLine("Прямые совпадают");
+    }
+    else if (k1==k2 && b1 != b2){
+    Console.WriteLine("Прямые параллельны, точек пересечения нет");
+    }
+else{
+    double x = (b2-b1)/(k1-k2);
+    double y = x*k1 + b1;
+Console.WriteLine ($"k1 = {k1}, b1 = {b1}, k2 = {k2}, b2 = {b2} -> ({x}; {y})");
 }
-
-Console.WriteLine ("-> " + "x");
-Console.WriteLine (y);
+*/
